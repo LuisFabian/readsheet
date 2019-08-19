@@ -108,7 +108,7 @@ limitations under the License.
       function listMajors() {
         gapi.client.sheets.spreadsheets.values.get({
           spreadsheetId: '196uRqYVXXboCASGaFVFaPtY63qlAjoEUUwlmuQ9_2Q4',
-          range: 'Class Data!A2:C',
+          range: 'A2:C2',
         }).then(function(response) {
           var range = response.result;
           if (range.values.length > 0) {
