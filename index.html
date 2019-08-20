@@ -113,7 +113,7 @@ limitations under the License.
           var range = response.result;
           if (range.values.length > 0) {
             var headRow =  range.values[0];
-            appendPre(headRow[0], headRow[1], headRow[2]);
+            appendPre(headRow[0] + " | " + headRow[1] + " | " +, headRow[2]);
             for (i = 1; i < range.values.length; i++) {
               var row = range.values[i];
               // Print columns A and E, which correspond to indices 0 and 4.
