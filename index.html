@@ -129,8 +129,9 @@ limitations under the License.
       }
 
     $(function(){
-          $.getJSON("//docs.google.com/spreadsheets/d/e/2PACX-1vTUk5riCry3HPXHxrx9bLV5qLQETGwycaWmtN69kcEuJ4307TdbgZn4QHeYRB12D2tyd0nqxUs-jl9Y/od6/public/values?alt=json", 
-            function(data) {
+          var spreadsheetID = "2PACX-1vTUk5riCry3HPXHxrx9bLV5qLQETGwycaWmtN69kcEuJ4307TdbgZn4QHeYRB12D2tyd0nqxUs-jl9Y";
+          var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
+          $.getJSON(url, function(data) {
             //first row "title" column
             console.log(data.feed.entry[0]['gsx$title']['$t']);
           });
