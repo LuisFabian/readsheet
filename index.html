@@ -126,8 +126,14 @@ limitations under the License.
           appendPre('Error: ' + response.result.error.message);
         });
       }
-    </script>
 
+
+      $.getJSON("https://docs.google.com/spreadsheets/d/e/2PACX-1vTUk5riCry3HPXHxrx9bLV5qLQETGwycaWmtN69kcEuJ4307TdbgZn4QHeYRB12D2tyd0nqxUs-jl9Y/pubhtml?gid=2020631632&single=true", function(data) {
+        //first row "title" column
+        console.log(data);
+      });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script async defer src="https://apis.google.com/js/api.js"
       onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
